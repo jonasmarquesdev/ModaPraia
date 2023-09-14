@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap');
+
+:root {
+    --branco-default: #FFFFFF;
+    --branco: #F9F9F9;
+    --cinza: #A8A8A8;
+    --preto: #181818;
+    --cor-de-fundo: #121214;
+    --laranja: #FFA634;
+    --linear-rosa-laranja: linear-gradient(222deg, #FF267A 0%, #FFA634 100%);
+
+    --fonte-principal: 'Mukta';
+    --fonte-secundaria: 'Open Sans';
+}

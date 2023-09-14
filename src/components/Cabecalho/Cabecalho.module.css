@@ -1,0 +1,22 @@
+.container {
+  background-color: var(--branco-default);
+  color: var(--preto);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .banner {
+  width: 250px;
+}
+
+@media (max-width: 991px) {
+  .container .banner {
+    width: 180px;
+  }
+
+  .contato {
+    display: none;
+  }
+}
