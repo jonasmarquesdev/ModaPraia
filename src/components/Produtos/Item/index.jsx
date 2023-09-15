@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styled from "styled-components";
 import {
   Badge,
@@ -8,7 +9,6 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import image from "../../../assets/banner.jpg";
 
 const ContainerProduto = styled.div`
   background-color: var(--cinza);
@@ -23,7 +23,7 @@ const Sifrao = styled.span`
   margin-right: 2px;
 `;
 
-function Produto() {
+function Item({ imagem, nome, valor }) {
   return (
     <ContainerProduto>
       <Card sx={{ maxWidth: 345, boxShadow: "none" }}>
@@ -31,19 +31,30 @@ function Produto() {
           <CardMedia
             component="img"
             height="140"
-            image={image}
+            image={imagem}
             alt="green iguana"
+            sx={{ objectFit: "contain" }}
           />
           <CardContent>
-            <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-              <Typography sx={{ color: "#CB6CE6" }} gutterBottom variant="h5" component="div">
-                Blusa
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
+              <Typography
+                sx={{ color: "#CB6CE6" }}
+                gutterBottom
+                variant="h5"
+                component="div"
+              >
+                {nome}
               </Typography>
-              <Badge sx={{ color: "green", fontSize: 17 }} ><Sifrao>R$</Sifrao> 16,00</Badge>
+              <Badge sx={{ color: "green", fontSize: 17 }}>
+                <Sifrao>R$</Sifrao> {valor}
+              </Badge>
             </Box>
-            {/* <Typography variant="body2" color="text.secondary">
-              Roupas de banho
-            </Typography> */}
           </CardContent>
         </CardActionArea>
       </Card>
@@ -51,4 +62,4 @@ function Produto() {
   );
 }
 
-export default Produto;
+export default Item;

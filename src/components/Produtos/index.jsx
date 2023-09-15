@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import Produto from "./Produto";
+import Item from "./Item";
+
+import Produtos from "./Item/assets";
 
 const ContainerEstilizado = styled.section`
   background-color: var(--branco-default);
@@ -9,7 +11,7 @@ const ContainerEstilizado = styled.section`
 
 const ContainerProdutos = styled.section`
   background-color: var(--branco);
-  color: var(--branco);
+  color: var(--preto);
   height: auto;
   padding: 3em 3em 10em 3em;
   margin-top: 1em;
@@ -21,21 +23,22 @@ const ContainerProdutos = styled.section`
   border-radius: 16px;
 `;
 
-function Produtos() {
+function ListaProdutos() {
   return (
     <ContainerEstilizado>
-      <h1>Produtos</h1>
+      <h1>Todos Produtos</h1>
       <ContainerProdutos>
-        <Produto />
-        <Produto />
-        <Produto />
-        <Produto />
-        <Produto />
-        <Produto />
-        <Produto />
+        {Produtos.map((Produto) => (
+          <Item 
+            key={Produto.id}
+            imagem={Produto.imagem} 
+            nome={Produto.nome}
+            valor={Produto.valor}
+          />
+        ))}
       </ContainerProdutos>
     </ContainerEstilizado>
   );
 }
 
-export default Produtos;
+export default ListaProdutos;
