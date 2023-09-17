@@ -1,0 +1,21 @@
+.innerCarousel {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: grab;
+  overflow: hidden;
+  height: 360px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

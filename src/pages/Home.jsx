@@ -1,10 +1,11 @@
-import { Cabecalho, Slider, ListaProdutos, Footer } from "../components";
+import { Cabecalho, Slider, ListaPopulares, ListaProdutos, Footer } from "../components";
 
 function Home() {
   return(
     <>
       <Cabecalho />
       <Slider />
+      <ListaPopulares />
       <ListaProdutos />
       <Footer />
     </>
