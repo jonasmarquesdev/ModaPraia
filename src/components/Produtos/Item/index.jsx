@@ -11,11 +11,12 @@ import {
 } from "@mui/material";
 
 const ContainerProduto = styled.div`
-  background-color: var(--cinza);
   color: var(--preto);
   height: 200px;
   width: 200px;
   margin-top: 2em;
+  pointer-events: none;
+  border-radius: 8px;
 `;
 
 const Sifrao = styled.span`
@@ -26,7 +27,7 @@ const Sifrao = styled.span`
 function Item({ imagem, nome, valor }) {
   return (
     <ContainerProduto>
-      <Card sx={{ maxWidth: 345, boxShadow: "none" }}>
+      <Card sx={{ maxWidth: 345, boxShadow: "none", borderRadius: "0" }}>
         <CardActionArea>
           <CardMedia
             component="img"
@@ -43,17 +44,20 @@ function Item({ imagem, nome, valor }) {
                 alignItems: "flex-start",
               }}
             >
+              <Badge sx={{ color: "green", fontSize: 17 }}>
+                <Sifrao>R$</Sifrao> {valor}
+              </Badge>
               <Typography
-                sx={{ color: "#CB6CE6" }}
+                sx={{ 
+                  color: "var(--preto)", 
+                  fontSize: "16px"
+                }}
                 gutterBottom
                 variant="h5"
                 component="div"
               >
                 {nome}
               </Typography>
-              <Badge sx={{ color: "green", fontSize: 17 }}>
-                <Sifrao>R$</Sifrao> {valor}
-              </Badge>
             </Box>
           </CardContent>
         </CardActionArea>
