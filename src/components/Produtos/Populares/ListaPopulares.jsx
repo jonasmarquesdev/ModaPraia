@@ -4,6 +4,7 @@ import Produtos from "../Item/assets";
 import styles from "./ListaPopulares.module.css";
 import styled from "styled-components";
 import { useEffect, useRef, useState } from "react";
+import { Box, Button } from "@mui/material";
 
 const CarouselContainer = styled.section`
   background-color: var(--branco-default);
@@ -21,7 +22,15 @@ function ListaPopulares() {
 
   return (
     <CarouselContainer>
-      <h1>Mais vendidos</h1>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between"
+        }}
+      >
+        <h1>Mais vendidos</h1>
+        <Button sx={{ color: 'var(--cinza-escuro)' }}>ver mais</Button>
+      </Box>
       <motion.div ref={carousel} className={styles.carousel}>
         <motion.div
           drag="x"

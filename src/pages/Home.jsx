@@ -4,7 +4,7 @@ function Home() {
   return(
     <>
       <Cabecalho />
-      <Slider />
+      <Slider height="500px" />
       <ListaPopulares />
       <ListaProdutos />
       <Footer />

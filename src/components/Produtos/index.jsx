@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Item from "./Item";
 
 import Produtos from "./Item/assets";
+import { Box, Button } from "@mui/material";
 
 const ContainerEstilizado = styled.section`
   background-color: var(--branco-default);
@@ -26,7 +27,15 @@ const ContainerProdutos = styled.section`
 function ListaProdutos() {
   return (
     <ContainerEstilizado>
-      <h1>Todos Produtos</h1>
+      <Box 
+        sx={{
+          display: "flex",
+          justifyContent: "space-between"
+        }}
+      >
+        <h1>Todos Produtos</h1>
+        <Button sx={{ color: 'var(--cinza-escuro)' }}>ver mais</Button>
+      </Box>
       <ContainerProdutos>
         {Produtos.map((Produto) => (
           <Item 

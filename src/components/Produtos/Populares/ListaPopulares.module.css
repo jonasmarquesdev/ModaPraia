@@ -1,7 +1,7 @@
 .innerCarousel {
   display: flex;
-  flex-direction: row;
-  gap: 2em;
+  flex-direction: row-reverse;
+  gap: 1em;
   align-items: center;
 }
 
